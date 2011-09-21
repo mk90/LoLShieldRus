@@ -1,0 +1,27 @@
+This is a library to support the LOLShield, an open source charlieplexed display by Jimmie Rodgers:
+
+http://jimmieprodgers.com/kits/lolshield/
+
+Place this in your Arduino libraries folder, then check out the examples!
+
+
+All those program are distributed under GPL v2+ or LGPL v2+ license
+
+(C) 2009-2010 Jimmie P Rodgers, Benjamin Sonntag, Alex Wanger, Aurélien Couderc, Matt Mets, & maybe others, 
+
+======================
+
+Библиотека для поддержки LoLShield - открытой шилд-платы светодиодного дисплея для Arduino на основе хексоплексирования,
+разработанной Jimmie P. Rodgers:
+
+http://jimmieprodgers.com/kits/lolshield/ 
+
+Поместите эти файлы в каталог для библиотек Arduino и попробуйте запустить примеры!
+
+Исходный текст программы распространяется по лицензии GPL v2+ или LGPL v2+.
+(C) 2009-2010 Jimmie P Rodgers, Benjamin Sonntag, Alex Wanger, Aurélien Couderc, Matt Mets, & возможно другие
+
+Данная библиотека была модифицирована для поддержки русского языка Ilya V. Danilov, более подробную информацию 
+на русском языке можно найти здесь: http://mk90.blogspot.com/search/label/lol
+
+Оригинальная ветка с иходным текстом находится здесь: https://github.com/cibomahto/LoLShield
