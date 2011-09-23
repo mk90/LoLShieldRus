@@ -1,5 +1,3 @@
-#include <avr/pgmspace.h>
-
 /*
   Font drawing library
 
@@ -27,6 +25,7 @@
 #include "Font.h"
 #include "Charliplexing.h"
 #include <inttypes.h>
+#include <avr/pgmspace.h>
 
 prog_uchar letters_71[] PROGMEM = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,1, 1,7, 2,1, 2,4, 2,7, 3,1, 3,2, 3,4, 3,5, 3,6, 3,7, 9,9 };
 prog_uchar letters_83[] PROGMEM = { 0,2, 0,3, 0,7, 1,1, 1,4, 1,7, 2,1, 2,4, 2,7, 3,1, 3,5, 3,6, 9,9 };
@@ -67,6 +66,30 @@ prog_uchar letters_56[] PROGMEM = { 0,2, 0,3, 0,5, 0,6, 1,1, 1,4, 1,7, 2,1, 2,4,
 prog_uchar letters_66[] PROGMEM = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,1, 1,4, 1,7, 2,1, 2,4, 2,7, 3,2, 3,3, 3,5, 3,6, 9,9 };
 prog_uchar letters_52[] PROGMEM = { 0,4, 0,5, 1,3, 1,5, 2,2, 2,5, 3,1, 3,2, 3,3, 3,4, 3,5, 3,6, 3,7, 4,5, 9,9 };
 prog_uchar letters_55[] PROGMEM = { 0,1, 1,1, 2,1, 2,5, 2,6, 2,7, 3,1, 3,3, 3,4, 4,1, 4,2, 9,9 };
+
+// russian-only letters
+
+PROGMEM prog_uchar letters_cyr_be[]  = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,1, 1,4, 1,7, 2,1, 2,4, 2,7, 3,1, 3,5, 3,6, 9,9 };
+PROGMEM prog_uchar letters_cyr_ghe[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,1	, 2,1, 3,1, 9,9 };
+PROGMEM prog_uchar letters_cyr_de[] = { 0,7, 0,8, 1,2, 1,3, 1,4, 1,5, 1,6, 1,7, 2,1, 2,7, 3,1, 3,7, 4,1, 4,2, 4,3, 4,4, 4,5, 4,6, 4,7, 5,7, 5,8, 9,9 };
+PROGMEM prog_uchar letters_cyr_zhe[] = { 0,1, 0,2, 0,6, 0,7, 1,3, 1,5, 2,2, 2,3, 2,4, 2,5, 2,6, 3,3, 3,5, 4,1, 4,2, 4,6, 4,7, 9,9 };
+PROGMEM prog_uchar letters_cyr_i[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,5, 2,4, 3,3, 4,1, 4,2, 4,3, 4,4, 4,5, 4,6, 4,7, 9,9 };
+PROGMEM prog_uchar letters_cyr_short_i[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,0, 1,5, 2,1, 2,4, 3,0, 3,3, 4,1, 4,2, 4,3, 4,4, 4,5, 4,6, 4,7, 9,9 };
+PROGMEM prog_uchar letters_cyr_el[] = { 0,7, 1,2, 1,3, 1,4, 1,5, 1,6, 1,7, 2,1, 3,1, 4,1, 4,2, 4,3, 4,4, 4,5, 4,6, 4,7, 9,9 };
+PROGMEM prog_uchar letters_cyr_pe[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,1, 2,1, 3,1, 3,2, 3,3, 3,4, 3,5, 3,6, 3,7, 9,9 };
+PROGMEM prog_uchar letters_cyr_u[] = { 0,1, 0,2, 0,3, 0,7, 1,4, 1,7, 2,4, 2,7, 3,1, 3,2, 3,3, 3,4, 3,5, 3,6, 9,9 };
+PROGMEM prog_uchar letters_cyr_ef[] = { 0,2, 0,3, 0,4, 0,5, 1,1, 1,6, 2,1, 2,2, 2,3, 2,4, 2,5, 2,6, 2,7, 3,1, 3,6, 4,2, 4,3, 4,4, 4,5, 9,9 };
+PROGMEM prog_uchar letters_cyr_tse[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,7, 2,7, 3,1, 3,2, 3,3, 3,4, 3,5, 3,6, 3,7, 4,7, 4,8, 9,9 };
+PROGMEM prog_uchar letters_cyr_che[] = { 0,1, 0,2, 0,3, 1,4, 2,4, 3,1, 3,2, 3,3, 3,4, 3,5, 3,6, 3,7, 9,9 };
+PROGMEM prog_uchar letters_cyr_sha[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,7, 2,1, 2,2, 2,3, 2,4, 2,5, 2,6, 2,7, 3,7, 4,1, 4,2, 4,3, 4,4, 4,5, 4,6, 4,7, 9,9 };
+PROGMEM prog_uchar letters_cyr_shcha[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,7, 2,1, 2,2, 2,3, 2,4, 2,5, 2,6, 2,7, 3,7, 4,1, 4,2, 4,3, 4,4, 4,5, 4,6, 4,7, 5,7, 5,8, 9,9 };
+PROGMEM prog_uchar letters_cyr_hard_sign[] = { 0,1, 1,1, 1,2, 1,3, 1,4, 1,5, 1,6, 1,7, 2,4, 2,7, 3,4, 3,7, 4,5, 4,6, 9,9 };
+PROGMEM prog_uchar letters_cyr_soft_sign[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,4, 1,7, 2,4, 2,7, 3,5, 3,6, 9,9 };
+PROGMEM prog_uchar letters_cyr_yeru[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,4, 1,7, 2,4, 2,7, 3,5, 3,6, 5,1, 5,2, 5,3, 5,4, 5,5, 5,6, 5,7, 9,9};
+PROGMEM prog_uchar letters_cyr_e[] = { 0,1, 0,4, 0,7, 1,1, 1,4, 1,7, 2,1, 2,4, 2,7, 3,1, 3,4, 3,7, 4,2, 4,3, 4,4, 4,5, 4,6, 9,9};
+PROGMEM prog_uchar letters_cyr_yu[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,4, 2,2, 2,3, 2,4, 2,5, 2,6, 3,1, 3,7, 4,1, 4,7, 5,2, 5,3, 5,4, 5,5, 5,6, 9,9};
+PROGMEM prog_uchar letters_cyr_ya[] = { 0,2, 0,3, 0,7, 1,1, 1,4, 1,6, 2,1, 2,4, 2,5, 3,1, 3,4, 4,1, 4,2, 4,3, 4,4, 4,5, 4,6, 4,7, 9,9};
+PROGMEM prog_uchar letters_cyr_io[] = { 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 1,0, 1,1, 1,4, 1,7, 2,1, 2,4, 2,7, 3,0, 3,1, 3,4, 3,7, 9,9};
 
 prog_uchar* font[] = {  letters_33 /*!*/,  0,  0,  0,  0,  0,  letters_39 /*'*/,  0,  0,  0,  0,  letters_44 /*,*/,  0,  0,  0,  
 letters_48 /*0*/,  letters_49 /*1*/,  letters_50 /*2*/,  letters_51 /*3*/,  letters_52 /*4*/,  letters_53 /*5*/,  
@@ -116,6 +139,19 @@ prog_uchar* font2[] = { 0,  0,  0,  0,  0,  0,  letters_97 /*a*/,  letters_98 /*
 
 #endif
 
+PROGMEM const unsigned char* font_ru[] = {  
+ letters_65 /*A*/, letters_cyr_be /*Б*/, letters_66 /*B*/, letters_cyr_ghe /*Г*/,
+ letters_cyr_de /*Д*/, letters_69 /*E*/, letters_cyr_zhe /*Ж*/, letters_51 /*3*/,
+ letters_cyr_i /*И*/, letters_cyr_short_i /*Й*/, letters_75 /*K*/, letters_cyr_el /*Л*/,  
+ letters_77 /*M*/, letters_72 /*H*/, letters_79 /*O*/, letters_cyr_pe /*П*/, 
+ letters_80 /*P*/, letters_67 /*C*/, letters_84 /*T*/, letters_cyr_u /*У*/,
+ letters_cyr_ef /*Ф*/, letters_88 /*X*/, letters_cyr_tse /*Ц*/, letters_cyr_che /*Ч*/,
+ letters_cyr_sha /*Ш*/, letters_cyr_shcha /*Щ*/, letters_cyr_hard_sign /*Ъ*/, letters_cyr_yeru /*Ы*/,
+ letters_cyr_soft_sign /*Ь*/, letters_cyr_e /*Э*/, letters_cyr_yu /*Ю*/, letters_cyr_ya /*Я*/
+};
+
+uint16_t utf_hi_char = 0;
+
 /* -----------------------------------------------------------------  */
 /** Draws a figure (0-9). You should call it with set=1, 
  * wait a little them call it again with set=0
@@ -125,42 +161,41 @@ prog_uchar* font2[] = { 0,  0,  0,  0,  0,  0,  letters_97 /*a*/,  letters_98 /*
  */
 uint8_t Font::Draw(unsigned char letter,int x,int y,int set) {
   uint16_t maxx=0;
+  unsigned char* character;
 
-  uint8_t charCol;
-  uint8_t charRow;
+  if (letter==' ') return 3+2; // пробел = ничего не рисуем :(
 
-  prog_uchar* character;
-  if (letter==' ') return 3+2;
-  if (letter<fontMin || letter>fontMax) {
-    return 0;
+  if (letter>=0x80) { // UTF-8 handling
+    if (letter >= 0xc0) {
+      utf_hi_char = letter - 0xd0;
+      return 0;
+    } else {
+      letter &= 0x3f;
+      if (!utf_hi_char && (letter==1)) 
+        character = letters_cyr_io;
+      else
+       character = (unsigned char *)pgm_read_word(&(font_ru[letter+(utf_hi_char<<6) - 0x10]));
+    }    
+  } else {
+    if (letter<fontMin || letter>fontMax) 
+     return 0;
+    else 
+     character = (unsigned char *)pgm_read_word(&(font[letter-fontMin]));
   }
-
-//  if (letter>90) {
-//     character = font2[letter-90];
-//  } else {
-    character = font[letter-fontMin];
-//  }
 
   int i=0;
-
-  charCol = pgm_read_byte_near(character);
-  charRow = pgm_read_byte_near(character + 1);
-
-  while (charRow!=9) {
-    if (charCol>maxx) maxx=charCol;
-    if (
-     charCol + x <14 && 
-     charCol + x >=0 && 
-     charRow + y <8 && 
-     charRow + y >=0
-    ) {
-        LedSign::Set(charCol + x, charRow+y, set);
-    } 
+  unsigned char point_x,point_y;
+  do {
+    point_x = pgm_read_byte_near(character+i);
+    point_y = pgm_read_byte_near(character+i+1);
+    if (point_x == 9) break;
+    if (maxx < point_x) maxx = point_x;
+    if (point_x+x<14 && point_x+x>=0 && point_y+y<9 && point_y+y>=0) {
+      LedSign::Set(point_x+x, point_y+y, set);
+    }
     i+=2;
+  } while (1);
 
-    charCol = pgm_read_byte_near(character + i);
-    charRow = pgm_read_byte_near(character + 1 + i);
-  }
   return maxx+2;
 }
 
@@ -173,44 +208,43 @@ uint8_t Font::Draw(unsigned char letter,int x,int y,int set) {
 */
 uint8_t Font::Draw90(unsigned char letter,int x,int y,int set) {
   uint16_t maxx=0;
+  unsigned char* character;
 
-  uint8_t charCol;
-  uint8_t charRow;
+  if (letter==' ') return 3+2; // пробел = ничего не рисуем :(
 
-  prog_uchar* character;
-  if (letter==' ') return 3+2;
-  if (letter<fontMin || letter>fontMax) {
-    return 0;
+  if (letter>=0x80) { // UTF-8 handling
+    if (letter >= 0xc0) {
+      utf_hi_char = letter - 0xd0;
+      return 0;
+    } else {
+      letter &= 0x3f;
+      if (!utf_hi_char && (letter==1)) 
+        character = letters_cyr_io;
+      else
+       character = (unsigned char *)pgm_read_word(&(font_ru[letter+(utf_hi_char<<6) - 0x10]));
+    }    
+  } else {
+    if (letter<fontMin || letter>fontMax) 
+     return 0;
+    else 
+     character = (unsigned char *)pgm_read_word(&(font[letter-fontMin]));
   }
-
-//  if (letter>90) {
-//     character = font2[letter-90];
-//  } else {
-    character = font[letter-fontMin];
-//  }
 
   int i=0;
-
-  charCol = pgm_read_byte_near(character);
-  charRow = pgm_read_byte_near(character + 1);
-
-  while (charRow!=9) {
-    if (charCol>maxx) maxx=charCol;
-    if (
-     charRow + x <14 && 
-     charRow + x >=0 && 
-     charCol + y <8 && 
-     charCol + y >=0
-    ) {
-        LedSign::Set(7 - charRow + x, charCol + y, set);
-    } 
+  unsigned char point_x,point_y;
+  do {
+    point_x = pgm_read_byte_near(character+i);
+    point_y = pgm_read_byte_near(character+i+1);
+    if (point_x == 9) break;
+    if (maxx < point_x) maxx = point_x;
+    if (point_x+x<14 && point_x+x>=0 && point_y+y<9 && point_y+y>=0) {
+      //LedSign::Set(point_x+x, point_y+y, set);
+      LedSign::Set(7-point_y+x, point_x+y, set);
+    }
     i+=2;
+  } while (1);
 
-    charCol = pgm_read_byte_near(character + i);
-    charRow = pgm_read_byte_near(character + 1 + i);
-  }
   return maxx+2;
-
 }
 
 
