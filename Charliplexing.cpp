@@ -28,7 +28,12 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "WProgram.h"
+
+#if defined(ARDUINO) && ARDUINO >= 100
+  #include "Arduino.h"
+#else
+  #include "WProgram.h"
+#endif
 #include <inttypes.h>
 #include <avr/interrupt.h>
 #include "Charliplexing.h"
